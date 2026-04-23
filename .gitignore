@@ -1,0 +1,25 @@
+# --- Fichiers système (macOS et Windows) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+$RECYCLE.BIN/
+
+# --- Fichiers temporaires et cache Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Environnements virtuels Python (si tes utilisateurs en créent un) ---
+venv/
+env/
+.venv/
+
+# --- Fichiers MaxMSP temporaires ---
+*.maxcrash
+
+# --- Modèles d'apprentissage (Optionnel) ---
+# Si tes fichiers JSON d'entraînement FluCoMa dépassent 100 Mo, 
+# enlève le '#' de la ligne ci-dessous pour empêcher GitHub de les bloquer :
+# modeles/*.json
