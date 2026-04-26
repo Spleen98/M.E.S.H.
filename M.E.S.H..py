@@ -270,6 +270,9 @@ def main():
         bar_width = int(avg_brightness * w)
         cv2.rectangle(annotated_frame, (0, h - 20), (bar_width, h), (255, 255, 255), -1)
 
+        # --- INVERSION DE L'IMAGE POUR L'AFFICHAGE (EFFET MIROIR) ---
+        annotated_frame = cv2.flip(annotated_frame, 1)
+
         cv2.imshow('Pose2OSC - Back to Black', annotated_frame)
 
         # --- GESTION CLAVIER ---
