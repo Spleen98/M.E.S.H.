@@ -4,14 +4,19 @@ This system operates in two parts: a biometric analysis script (Python) and a sy
 
 ## Project Hierarchy (Important)
 
-For M.E.S.H. to function correctly, **all files must strictly remain in the main folder**. Do not separate the Max patch from the Python script or the JavaScript file. Your folder structure should look exactly like this:
+For M.E.S.H. to function correctly, **all files must strictly remain in the main folder**. Do not separate the Max patch from the Python script or the JavaScript file. Your folder structure should look like this:
 
 M.E.S.H./
 ├── launcher.js           # The Node.js bridge between Max and Python
-├── M.E.S.H..maxpat       # The main Max patch (name may vary depending on your file)
+├── LICENSE               # Apache License 2.0
+├── M.E.S.H..maxpat       # The main Max patch
 ├── M.E.S.H..py           # The biometric analysis script
-├── modeles/              # (Optional) Folder containing your FluCoMa models
-└── README.txt
+├── MemoGrain.maxpat      # Instrument Max patch
+├── modeles/              # (Optional) Folder containing your AI FluCoMa models
+├── Odyssey.maxpat        # Instrument Max patch
+├── README.md             # This documentation file
+├── RecurMorph.maxpat     # Instrument Max patch
+└── training_datasets/    # (Optional) Folder containing your training data
 
 
 ## Installations and Prerequisites

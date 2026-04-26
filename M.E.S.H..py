@@ -84,7 +84,7 @@ def get_face_params(landmarks, jaw_ref_offset=0.0):
     brow_right_inner = (landmarks[336].x, landmarks[336].y)
     brow_right_outer = (landmarks[300].x, landmarks[300].y)
 
-    # --- CALCUL SOURCILS (LOGIQUE V8.0 RESTAURÉE) ---
+    # --- CALCUL SOURCILS ---
     left_eye_top = (landmarks[159].x, landmarks[159].y)
     brow_height_left = euclidean_distance(left_eye_top, brow_left_inner) / eye_dist
     brow_height_right = euclidean_distance(left_eye_top, brow_right_inner) / eye_dist
@@ -101,7 +101,6 @@ def get_face_params(landmarks, jaw_ref_offset=0.0):
     current_mouth_open = euclidean_distance(top_lip, bottom_lip)
     jaw_open_val = (current_mouth_open - jaw_ref_offset) / eye_dist
 
-    # --- JAW RANGE (V9.6/9.8) ---
     jaw_open = clamp(jaw_open_val * 1.0)
 
     brow_tilt_left = brow_left_inner[1] - brow_left_outer[1]
@@ -157,10 +156,10 @@ def main():
 
     print("Système prêt. 'q' pour quitter, 'c' pour calibrer mâchoire.")
 
- # --- INITIALISATION DE LA FENÊTRE ---
+    # --- INITIALISATION DE LA FENÊTRE ---
     cv2.namedWindow('Pose2OSC - Back to Black', cv2.WINDOW_NORMAL)
-    cv2.resizeWindow('Pose2OSC - Back to Black', 640, 480) # Force une taille initiale
-    cv2.waitKey(1) # Laisse le temps à macOS de dessiner la fenêtre
+    cv2.resizeWindow('Pose2OSC - Back to Black', 640, 480)
+    cv2.waitKey(1)
 
     while True:
         ret, frame = cap.read()
@@ -238,7 +237,7 @@ def main():
                 client.send_message("/face/smile", params["smile"])
                 client.send_message("/face/frown", params["frown"])
                 client.send_message("/face/jaw", params["jaw_open"])
-                client.send_message("/face/brow_height", params["brow_height"])  # LEGACY V8.0
+                client.send_message("/face/brow_height", params["brow_height"])
                 client.send_message("/face/mood", params["mood"])
                 client.send_message("/face/eye/openness", params["eye_open"])
                 client.send_message("/face/gaze/x", params["gaze_x"])
@@ -265,11 +264,7 @@ def main():
                 cv2.circle(annotated_frame, to_px(*params["r_iris"]), 4, (0, 255, 255), -1)
 
         # --- VISUALISATION FINALE ---
-        # L'affichage du texte des émotions a été retiré ici.
         
-        bar_width = int(avg_brightness * w)
-        cv2.rectangle(annotated_frame, (0, h - 20), (bar_width, h), (255, 255, 255), -1)
-
         # --- INVERSION DE L'IMAGE POUR L'AFFICHAGE (EFFET MIROIR) ---
         annotated_frame = cv2.flip(annotated_frame, 1)
 
