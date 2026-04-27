@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ -62.0, -993.0, 1449.0, 959.0 ],
+		"rect" : [ 34.0, 100.0, 1660.0, 983.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 5202.739030838012695, 3086.956462860107422, 40.0, 22.0 ],
+					"text" : "*~ 0.7"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-22",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "signal" ],
+					"patching_rect" : [ 1043.478240966796875, 3110.869505882263184, 40.0, 22.0 ],
+					"text" : "*~ 0.7"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-25",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -66,9 +90,9 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 1072.222273349761963, 1688.888969421386719, 2128.0, 1828.0 ],
+					"patching_rect" : [ 1047.826066970825195, 2095.652133941650391, 4173.9129638671875, 930.434764862060547 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2557.894712448120117, 1515.789459228515625, 1042.857132911682129, 1799.999982833862305 ],
+					"presentation_rect" : [ 1039.189119815826416, 2047.297160625457764, 4095.652095794677734, 904.347808837890625 ],
 					"varname" : "Odyssey",
 					"viewvisibility" : 1
 				}
@@ -570,7 +594,7 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "multichannelsignal", "multichannelsignal" ],
-					"patching_rect" : [ 879.999916076660156, 5834.999443531036377, 2034.999805927276611, 1444.999862194061279 ],
+					"patching_rect" : [ 1728.0, 5856.0, 2034.999805927276611, 1444.999862194061279 ],
 					"presentation" : 1,
 					"presentation_rect" : [ 2284.210504531860352, 6615.789410591125488, 1488.235265731811523, 1252.941152572631836 ],
 					"viewvisibility" : 1
@@ -696,14 +720,14 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-40", 1 ],
+					"destination" : [ "obj-22", 0 ],
 					"source" : [ "obj-20", 0 ]
 				}
 
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-45", 3 ],
+					"destination" : [ "obj-24", 0 ],
 					"source" : [ "obj-20", 1 ]
 				}
 
@@ -724,8 +748,23 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-40", 1 ],
+					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-17", 1 ],
 					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-45", 1 ],
+					"midpoints" : [ 5212.239030838012695, 5635.535111904144287, 861.38892873128259, 5635.535111904144287 ],
+					"source" : [ "obj-24", 0 ]
 				}
 
 			}
@@ -821,15 +860,15 @@
 			"obj-21::obj-105" : [ "live.dial[72]", "Density", 0 ],
 			"obj-21::obj-189" : [ "live.dial[76]", "Taille", 0 ],
 			"obj-21::obj-193" : [ "live.dial[78]", "Random delay", 0 ],
-			"obj-21::obj-215" : [ "mc.live.gain~[3]", "face", 0 ],
+			"obj-21::obj-215" : [ "mc.live.gain~[3]", "right hand", 0 ],
 			"obj-21::obj-223" : [ "live.dial[28]", "Random delay", 0 ],
 			"obj-21::obj-224" : [ "live.dial[32]", "Taille", 0 ],
 			"obj-21::obj-225" : [ "live.dial[19]", "Speed", 0 ],
 			"obj-21::obj-227" : [ "live.dial[23]", "Density", 0 ],
 			"obj-21::obj-238" : [ "live.dial[25]", "Volume", 0 ],
-			"obj-21::obj-255" : [ "mc.live.gain~[1]", "left hand", 0 ],
+			"obj-21::obj-255" : [ "mc.live.gain~[1]", "face", 0 ],
 			"obj-21::obj-256" : [ "live.dial[29]", "Grains", 0 ],
-			"obj-21::obj-45" : [ "mc.live.gain~[2]", "right hand", 0 ],
+			"obj-21::obj-45" : [ "mc.live.gain~[2]", "left hand", 0 ],
 			"obj-21::obj-53" : [ "live.dial[1]", "Random delay", 0 ],
 			"obj-21::obj-54" : [ "live.dial[24]", "Taille", 0 ],
 			"obj-21::obj-55" : [ "live.dial[27]", "Speed", 0 ],
@@ -1009,6 +1048,17 @@
 			}
 , 			{
 				"name" : "fluid.stats.mxo",
+				"type" : "iLaX"
+			}
+, 			{
+				"name" : "grainflow.util.bphasor~.maxpat",
+				"bootpath" : "~/Documents/Max 8/Packages/grainflow/patchers/util",
+				"patcherrelativepath" : "../../Max 8/Packages/grainflow/patchers/util",
+				"type" : "JSON",
+				"implicit" : 1
+			}
+, 			{
+				"name" : "grainflow~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
