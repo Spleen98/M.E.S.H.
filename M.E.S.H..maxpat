@@ -90,9 +90,9 @@
 					"numoutlets" : 2,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "signal", "signal" ],
-					"patching_rect" : [ 1047.826066970825195, 2095.652133941650391, 4173.9129638671875, 930.434764862060547 ],
+					"patching_rect" : [ 1047.826066970825195, 2095.652133941650391, 4301.85178005695343, 888.888874053955078 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1039.189119815826416, 2047.297160625457764, 4095.652095794677734, 904.347808837890625 ],
+					"presentation_rect" : [ 1039.189119815826416, 2047.297160625457764, 4364.0, 904.0 ],
 					"varname" : "Odyssey",
 					"viewvisibility" : 1
 				}
@@ -482,8 +482,6 @@
 									"saved_object_attributes" : 									{
 										"autostart" : 0,
 										"defer" : 0,
-										"node_bin_path" : "",
-										"npm_bin_path" : "",
 										"watch" : 0
 									}
 ,
@@ -677,7 +675,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -685,7 +683,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -829,7 +827,6 @@
  ],
 		"parameters" : 		{
 			"obj-14" : [ "live.tab", "live.tab", 0 ],
-			"obj-20::obj-1" : [ "vst~[4]", "vst~", 0 ],
 			"obj-20::obj-107" : [ "live.menu", "live.menu", 0 ],
 			"obj-20::obj-111" : [ "live.menu[1]", "live.menu", 0 ],
 			"obj-20::obj-115" : [ "live.slider[7]", "live.slider", 0 ],
@@ -845,7 +842,6 @@
 			"obj-20::obj-169" : [ "live.menu[5]", "live.menu[3]", 0 ],
 			"obj-20::obj-17" : [ "live.gain~[15]", "live.gain~", 0 ],
 			"obj-20::obj-171" : [ "live.slider[8]", "live.slider", 0 ],
-			"obj-20::obj-22" : [ "controlgris", "live.text", 0 ],
 			"obj-20::obj-32" : [ "live.menu[6]", "live.menu[3]", 0 ],
 			"obj-20::obj-628" : [ "wvfosc1", "live.menu", 0 ],
 			"obj-20::obj-629" : [ "wvfosc2", "live.menu", 0 ],
@@ -1023,10 +1019,6 @@
 				"type" : "iLaX"
 			}
 , 			{
-				"name" : "fluid.chroma~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
 				"name" : "fluid.dataset~.mxo",
 				"type" : "iLaX"
 			}
@@ -1036,10 +1028,6 @@
 			}
 , 			{
 				"name" : "fluid.mlpregressor~.mxo",
-				"type" : "iLaX"
-			}
-, 			{
-				"name" : "fluid.noveltyfeature~.mxo",
 				"type" : "iLaX"
 			}
 , 			{
@@ -1060,12 +1048,6 @@
 , 			{
 				"name" : "grainflow~.mxo",
 				"type" : "iLaX"
-			}
-, 			{
-				"name" : "helpargs.js",
-				"bootpath" : "C74:/help/resources",
-				"type" : "TEXT",
-				"implicit" : 1
 			}
 , 			{
 				"name" : "launcher.js",

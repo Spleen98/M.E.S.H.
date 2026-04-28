@@ -18,12 +18,16 @@ M.E.S.H./
 ├── RecurMorph.maxpat     # Instrument Max patch
 └── training_datasets/    # (Optional) Folder containing your training data
 
+** All EmptySpace files are only there to keep the empty directory tracked in GitHub. They can all be deleted once on your computer.
+
 
 ## Installations and Prerequisites
 
 ### 1. Max Environment (FluCoMa)
 * Required software: Max 8 or Max 9 (Cycling '74).
-* Additional packages: Open Max, go to File > Show Package Manager, search for FluCoMa (Fluid Corpus Manipulation) and install it. This package is essential for the neural network and latent space management.
+* Additional packages: Open Max, go to File > Show Package Manager, and install the following packages:
+  * **FluCoMa (Fluid Corpus Manipulation):** Essential for the neural network and latent space management.
+  * **Grainflow (by Christopher Poovey):** Required for granular synthesis in the third instrument models.
 
 ### 2. Python Environment
 * Prerequisites: Ensure Python is installed (ideally a version between 3.9 and 3.11).
