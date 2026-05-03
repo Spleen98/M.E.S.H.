@@ -4,8 +4,8 @@ const Max = require('max-api');
 
 let pythonProcess = null;
 
-const PYTHON_PATH = "/Users/stephanedrouin/Documents/GitHub/M.E.S.H./.venv/bin/python";
-const SCRIPT_PATH = "/Users/stephanedrouin/Documents/GitHub/M.E.S.H./M.E.S.H..py";
+const PYTHON_PATH = "/Users/YOUR_PATH/YOUR_PATH_TO_FOLDER/YOUR_M.E.S.H._MAIN_FOLDER_NAME/.venv/bin/python";
+const SCRIPT_PATH = "/Users/YOUR_PATH/YOUR_PATH_TO_FOLDER/YOUR_M.E.S.H._MAIN_FOLDER_NAME/M.E.S.H..py";
                     
 Max.addHandler("start", () => {
     if (pythonProcess) {

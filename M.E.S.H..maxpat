@@ -92,7 +92,7 @@
 					"outlettype" : [ "signal", "signal" ],
 					"patching_rect" : [ 1047.826066970825195, 2095.652133941650391, 4301.85178005695343, 888.888874053955078 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 1039.189119815826416, 2047.297160625457764, 4364.0, 904.0 ],
+					"presentation_rect" : [ 840.744710922241211, 2076.666617155075073, 4463.265263557434082, 869.387746810913086 ],
 					"varname" : "Odyssey",
 					"viewvisibility" : 1
 				}
@@ -594,7 +594,7 @@
 					"outlettype" : [ "multichannelsignal", "multichannelsignal" ],
 					"patching_rect" : [ 1728.0, 5856.0, 2034.999805927276611, 1444.999862194061279 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 2284.210504531860352, 6615.789410591125488, 1488.235265731811523, 1252.941152572631836 ],
+					"presentation_rect" : [ 2324.0, 6616.0, 1488.235265731811523, 1252.941152572631836 ],
 					"viewvisibility" : 1
 				}
 
@@ -675,7 +675,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
-					"order" : 0,
+					"order" : 1,
 					"source" : [ "obj-1", 0 ]
 				}
 
@@ -683,7 +683,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-21", 0 ],
-					"order" : 1,
+					"order" : 0,
 					"source" : [ "obj-1", 0 ]
 				}
 

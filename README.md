@@ -27,7 +27,8 @@ M.E.S.H./
 * Required software: Max 8 or Max 9 (Cycling '74).
 * Additional packages: Open Max, go to File > Show Package Manager, and install the following packages:
   * **FluCoMa (Fluid Corpus Manipulation):** Essential for the neural network and latent space management.
-  * **Grainflow (by Christopher Poovey):** Required for granular synthesis in the third instrument models.
+  * **LowkeyNW (by Nathan Wolek):** Required for reverberation in the third instrument model.
+  * **Grainflow (by Christopher Poovey):** Required for granular synthesis in the third instrument model.
 
 ### 2. Python Environment
 * Prerequisites: Ensure Python is installed (ideally a version between 3.9 and 3.11).
@@ -61,8 +62,12 @@ To start the video directly from the M.E.S.H. .maxpat file, the launcher.js file
 You must edit the PYTHON_PATH and SCRIPT_PATH in the launcher.js file to match the exact folder location on your computer. Open launcher.js in a text editor and modify these lines:
 
 // Example for Mac:
-const PYTHON_PATH = "/Users/YOUR_NAME/PATH_TO_FOLDER/M.E.S.H./.venv/bin/python";
-const SCRIPT_PATH = "/Users/YOUR_NAME/PATH_TO_FOLDER/M.E.S.H./M.E.S.H..py"; 
+const PYTHON_PATH = "/Users/YOUR_PATH/YOUR_PATH_TO_FOLDER/YOUR_M.E.S.H._MAIN_FOLDER_NAME/.venv/bin/python";
+const SCRIPT_PATH = "/Users/YOUR_PATH/YOUR_PATH_TO_FOLDER/YOUR_M.E.S.H._MAIN_FOLDER_NAME/M.E.S.H..py"; 
+
+// Example for Windows:
+const PYTHON_PATH = "C:\\Users\\YOUR_PATH\\PATH_TO_FOLDER\\YOUR_M.E.S.H._MAIN_FOLDER_NAME\\.venv\\Scripts\\python.exe";
+const SCRIPT_PATH = "C:\\Users\\YOUR_PATH\\YOUR_PATH_TO_FOLDER\\YOUR_M.E.S.H._MAIN_FOLDER_NAME\\M.E.S.H..py";
 
 ### 2. Camera Selection (Optional)
 If the video feed does not appear or if you wish to use an external camera, change the camera device number (usually 0 for the built-in camera, 1 for a USB camera) directly in the TP3_MESH.py Python script:
